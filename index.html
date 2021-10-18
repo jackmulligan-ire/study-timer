@@ -12,12 +12,93 @@
     <header>
         <nav class="navbar navbar-expand navbar-dark bg-primary">
             <a href="#" class="navbar-brand">Simply Study</a>
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Settings</a></li>
+            <ul class="navbar-nav ml-auto align-items-center">
+                <li class="nav-item mx-1"><button type="button" class="btn btn-primary nav-link" data-toggle="modal" data-target="#aboutModal">
+                    About
+                  </button></li>
+                <li class="nav-item mx-1"><button type="button" class="btn btn-primary nav-link" data-toggle="modal" data-target="#settingsModal">
+                    Settings
+                  </button></li>
             </ul>
         </nav>
     </header>
+
+    <!-- Modals -->
+    <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="aboutModalLabel">About Simply Study</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+            <p>A study timer that gives you only the minimal elements needed to get stuff done. Based on <a href="https://francescocirillo.com/pages/pomodoro-technique">the Pomodoro Technique®</a>.</p>
+            <h6>How does it work?</h6>
+            <p>Study for 25 minutes, then take a 5-minute pause. Repeat the cycle 4 times. After the fourth study session, take a longer 15-minute break.</p>
+            <h6>What makes this different from other study timers?</h6>
+            <p>Simply Study is designed to not distract you from whatever you're doing. There's no to-do list and no reports.</p>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="modal fade" id="settingsModal" tabindex="-1" aria-labelledby="settingsModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content w-75 m-auto">
+            <div class="modal-header">
+            <h5 class="modal-title" id="settingsModalLabel">Settings</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row mb-3">
+                        <div class="col">
+                            Study length (mins): <select class="custom-select w-25">
+                                <option selected value="1">25</option>
+                                <option value="2">50</option>
+                              </select>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col">
+                            Pause length (mins): <select class="custom-select w-25">
+                                <option selected value="1">5</option>
+                                <option value="2">10</option>
+                              </select>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col">
+                            Break length (mins): <select class="custom-select w-25">
+                                <option selected value="1">15</option>
+                                <option value="2">20</option>
+                                <option value="3">25</option>
+                                <option value="4">30</option>
+                              </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            Intervals per break (#): <select class="custom-select w-25">
+                                <option selected value="1">2</option>
+                                <option selected value="2">4</option>
+                              </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
 
     <main>
         <div class="container">
@@ -47,7 +128,7 @@
                 <div class="col col-md-8 col-lg-6">
                     <div class="card border-left-0 border-right-0 border-top-0 align-items-center">
                         <div class="card-header align-self-stretch pt-2 pb-0 border-0 bg-secondary">
-                            <h5 class="text-white">Scoreboard</h5>
+                            <h5 class="text-white">Intervals</h5>
                         </div>
                         <div class="card-body d-flex flex-column align-items-center">
                             <h2 class="card-title display-4">0/4</h2>
