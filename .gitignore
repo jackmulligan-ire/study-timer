@@ -1,3 +1,7 @@
 notes.docx
 ~$notes.docx
 .vscode
+
+#Build
+/node_modules
+/scss
